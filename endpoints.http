@@ -1,0 +1,33 @@
+GET http://127.0.0.1:8000/api/questions/
+###
+GET http://127.0.0.1:8000/api/questions/3
+###
+DELETE http://127.0.0.1:8000/api/questions/2
+###
+
+POST http://127.0.0.1:8000/api/questions/
+content-type: application/json
+
+{
+  "question_text": "Who is the best WNBA player ever?",
+  "pub_date": "2020-11-12 23:45:45"
+}
+###
+
+PUT http://127.0.0.1:8000/api/questions/1
+content-type: application/json
+
+{
+  "question_text": "Who is the best NBA player ever?",
+  "pub_date": "2020-11-12 23:45:45"
+}
+
+
+###
+POST https://example.com/comments HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
