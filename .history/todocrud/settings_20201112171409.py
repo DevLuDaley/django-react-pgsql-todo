@@ -86,11 +86,10 @@ WSGI_APPLICATION = 'todocrud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        "NAME": "django-react-pgsql-todo",
+        ENGINE': 'django.db.backends.postgresql_psycopg2',
+        "NAME": "[django-react-pgsql-todo]",
         # "USER": LHD",
-        "USER": os.environ.get('DB_USER'),
-        "PASSWORD": os.environ.get('DB_PASS1'),
+        # "PASSWORD": "13devs",
         "HOST": "localhost",
         "PORT": "5432",
     }

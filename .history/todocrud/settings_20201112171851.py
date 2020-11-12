@@ -90,7 +90,7 @@ DATABASES = {
         "NAME": "django-react-pgsql-todo",
         # "USER": LHD",
         "USER": os.environ.get('DB_USER'),
-        "PASSWORD": os.environ.get('DB_PASS1'),
+        "PASSWORD": os.environ.get('DB_PASS'),
         "HOST": "localhost",
         "PORT": "5432",
     }

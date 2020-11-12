@@ -1,0 +1,28 @@
+```py
+# settings.py
+
+INSTALLED_APPS = [
+    'frontend.apps.FrontendConfig',  # added
+    'todos.apps.TodosConfig',  # added
+    'rest_framework',  # added
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+REST_FRAMEWORK = {  # added
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ],
+    'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S",
+}
+```
+
+We can specify the output format of a date and time by including DATETIME_FORMAT in a configuration dictionary named REST_FRAMEWORK.
+
+python manage.py makemigrations
+
+python manage.py migrate
