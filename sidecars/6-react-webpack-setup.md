@@ -51,3 +51,62 @@ We need to create a package.json file by running the following command before in
     npm i redux-form
     npm i axios
     npm i lodash
+
+ 
+# Creating config files
+
+Add a file named [.babelrc] to the overall project root directory and configure Babel:
+```js
+// .babelrc
+
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": ["transform-class-properties"]
+}
+```
+
+We can use Async/Await with Babel by installing @babel/polyfill and writing as above.
+
+Secondary, add a file named [webpack.config.js] to the same directory and write a configuration for webpack:
+
+```js
+// webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+};
+```
+
+Additionally, we need to rewrite the "scripts” property of the package.json file:
+```js
+// package.json
+
+{
+  // ...
+  "scripts": {
+    "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/frontend/main.js"
+  },
+  // ...
+}
+```
