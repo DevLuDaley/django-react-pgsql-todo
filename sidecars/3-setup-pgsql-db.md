@@ -57,4 +57,27 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+```
 
+# create Migrations
+    python manage.py makemigrations
+
+# Run Migration
+    python manage.py migrate
+
+
+# create superuser
+    python manage.py createsuperuser
+    
+    
+    Username (leave blank to use 'root'): richyen
+
+    Email address: support@enterprisedb.com
+
+    Password: 
+
+    Password (again): 
+
+response=>
+
+    Superuser created successfully.
