@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJ_SECRET_KEY')
+print(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -90,7 +91,7 @@ DATABASES = {
         "NAME": "django-react-pgsql-todo",
         # "USER": LHD",
         "USER": os.environ.get('DB_USER'),
-        "PASSWORD": os.environ.get('DB_PASS'),
+        "PASSWORD": os.environ.get('DB_PASS1'),
         "HOST": "localhost",
         "PORT": "5432",
     }
