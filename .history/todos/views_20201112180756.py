@@ -1,7 +1,6 @@
-# from django.shortcuts import render
+from django.shortcuts import render
 from rest_framework import viewsets
 
-# from .serializers import *
 # from .serializers import *
 from .serializers import TodoSerializer
 from todos.models import Todo
